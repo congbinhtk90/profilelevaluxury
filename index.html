@@ -20,6 +20,14 @@
 				display: block;
 			}
 			
+			.hide-element{
+				display:none !important;
+			}
+			
+			.show-element{
+				display:block !important;
+			}
+			
 			.i-action{
 				text-align: center;
 				margin-top: 20px;
@@ -70,7 +78,18 @@
 			<p>✅ Chân váy, Áo thun các kiểu.</p>
 		  </div>
 		  
-		  <div class="i-action clearfix">
+		  <div class="i-action clearfix" id="id-fb-web">
+			<a href="http://fb.com/levaluxury" class="ia-body clearfix">
+				<img src="https://congbinhtk90.github.io/profilelevaluxury/facebook-icon.jpg" class="ia-logo"/>
+				<div class="ia-title">
+					<span class="iat-title">Fanpage chính của LevaLuxury</span>
+					<span class="iat-title1">Fanpage</span>
+				</div>
+			</a>
+			<!--<span><a href="fb://page/107400954879717">FageBook mobile</a></span>
+			<span><a href="http://fb.com/levaluxury">FageBook web</a></span>-->
+		  </div>
+		  <div class="i-action clearfix" id="id-fb-mobile">
 			<a href="http://fb.com/levaluxury" class="ia-body clearfix">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/facebook-icon.jpg" class="ia-logo"/>
 				<div class="ia-title">
@@ -107,7 +126,13 @@
 		}
 	};
 	
-	var a = isMobile.any();
-	
-	alert("aa: " + navigator.userAgent + " | " + JSON.stringify(a));
+	var deviceName = isMobile.any();
+	console.log("AAAA: " + JSON.stringify(deviceName));
+	if(deviceName){
+		document.getElementById("id-fb-web").classList.add("hide-element");
+		document.getElementById("id-fb-mobile").classList.add("show-element");
+	}else{
+		document.getElementById("id-fb-web").classList.add("show-element");
+		document.getElementById("id-fb-mobile").classList.add("hide-element");
+	}
 </script>
