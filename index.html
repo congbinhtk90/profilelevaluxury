@@ -87,7 +87,16 @@
 				</div>
 			</a>
 		  </div>
-		  <div class="i-action clearfix" id="id-fb-mobile">
+		  <div class="i-action clearfix" id="id-fb-mobile-android">
+			<a href="fb://page/107400954879717" class="ia-body clearfix">
+				<img src="https://congbinhtk90.github.io/profilelevaluxury/facebook-icon.jpg" class="ia-logo"/>
+				<div class="ia-title">
+					<span class="iat-title">Fanpage chính của LevaLuxury</span>
+					<span class="iat-title1">fb.com/levaluxury</span>
+				</div>
+			</a>
+		  </div>
+		  <div class="i-action clearfix" id="id-fb-mobile-ios">
 			<a href="fb://profile/107400954879717" class="ia-body clearfix">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/facebook-icon.jpg" class="ia-logo"/>
 				<div class="ia-title">
@@ -125,9 +134,16 @@
 	var deviceName = isMobile.any();
 	if(deviceName){
 		document.getElementById("id-fb-web").classList.add("hide-element");
-		document.getElementById("id-fb-mobile").classList.add("show-element");
+		if(isMobile.iOS()){
+			document.getElementById("id-fb-mobile-android").classList.add("hide-element");
+			document.getElementById("id-fb-mobile-ios").classList.add("show-element");
+		}else{
+			document.getElementById("id-fb-mobile-android").classList.add("show-element");
+			document.getElementById("id-fb-mobile-ios").classList.add("hide-element");
+		}
 	}else{
 		document.getElementById("id-fb-web").classList.add("show-element");
-		document.getElementById("id-fb-mobile").classList.add("hide-element");
+		document.getElementById("id-fb-mobile-android").classList.add("hide-element");
+		document.getElementById("id-fb-mobile-ios").classList.add("hide-element");
 	}
 </script>
