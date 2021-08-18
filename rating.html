@@ -163,7 +163,11 @@
 	}
 	
 	function abc(){
-		alert('aaaa');
+	debugger;
+		setTimeout(function(){
+				isFinishGoogle = true;
+				ShowDialogFinish();	
+			},delayInMilliseconds);	
 	}
 	
 	if(isMobile.iOS()){
