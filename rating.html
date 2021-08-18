@@ -79,7 +79,7 @@
 		  </div>
 		  
 		  <div class="i-action clearfix" id="id-fb-mobile-android">
-			<a href="fb://page/107400954879717" class="ia-body clearfix" onclick="funcSuccessFB()">
+			<a href="fb://page/107400954879717" class="ia-body clearfix" onclick="funcMethod.funcSuccessFB">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/facebook-icon.jpg" class="ia-logo"/>
 				<div class="ia-title">
 					<span class="iat-title">Fanpage chính của LevaLuxury</span>
@@ -87,7 +87,7 @@
 				</div>
 			</a>
 		  </div>
-		  <div class="i-action clearfix" id="id-fb-mobile-ios" onclick="funcSuccessFB()">
+		  <div class="i-action clearfix" id="id-fb-mobile-ios" onclick="funcMethod.funcSuccessFB">
 			<a href="fb://profile/107400954879717" class="ia-body clearfix">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/facebook-icon.jpg" class="ia-logo"/>
 				<div class="ia-title">
@@ -97,7 +97,7 @@
 			</a>
 		  </div>
 		  <div class="i-action clearfix">
-			<a href="https://g.page/r/CVj3riiaDHpdEAg/review" class="ia-body clearfix" target="blank" onclick="funcSuccessGoogle()">
+			<a href="https://g.page/r/CVj3riiaDHpdEAg/review" class="ia-body clearfix" target="blank" onclick="funcMethod.funcSuccessGoogle">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/google-reviews-logo.jpg" class="ia-logo-google"/>
 				<div class="ia-title">
 					<span class="iat-title">Đánh giá LevaLuxury trên google</span>
@@ -139,22 +139,23 @@
 		}
 	};
 	
-	var funcSuccessFB = {
-		setTimeout(function() {
-			isFinishFB = true;
-			showDialogFinish();
-		}, delayInMilliseconds);
-	}
-	var funcSuccessGoogle = {
-		setTimeout(function(){
-			isFinishGoogle = true;
-			showDialogFinish();	
-		},delayInMilliseconds);		
-	}
-	
-	var showDialogFinish = {
-		if(isFinishFB && isFinishGoogle){
-			alert("Chúc mừng bạn đã nhận được voucher giảm giá 5%");
+	var funcMethod = {
+		FuncSuccessFB: function() {
+			setTimeout(function() {
+				isFinishFB = true;
+				showDialogFinish();
+			}, delayInMilliseconds);
+		},
+		FuncSuccessGoogle: function() {
+			setTimeout(function(){
+				isFinishGoogle = true;
+				showDialogFinish();	
+			},delayInMilliseconds);		
+		},
+		showDialogFinish: function(){
+			if(isFinishFB && isFinishGoogle){
+				alert("Chúc mừng bạn đã nhận được voucher giảm giá 5%");
+			}
 		}
 	}
 	
