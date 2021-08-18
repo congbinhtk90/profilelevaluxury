@@ -86,6 +86,7 @@
 					<span class="iat-title1">fb.com/levaluxury</span>
 				</div>
 			</a>
+			<img src="https://congbinhtk90.github.io/profilelevaluxury/ok.png"/>
 		  </div>
 		  <div class="i-action clearfix" id="id-fb-mobile-ios">
 			<a href="fb://profile/107400954879717" class="ia-body clearfix" onclick="FuncSuccessFB()">
@@ -140,25 +141,22 @@
 	};
 	
 	function FuncSuccessFB(){
-		console.log("aaaa");
-		setTimeout(function() {
+		//setTimeout(function() {
 			isFinishFB = true;
 			ShowDialogFinish();
-		}, delayInMilliseconds);
+		//}, delayInMilliseconds);
 	};
 	
 	function FuncSuccessGoogle(){
-		console.log("bbbbb");
-		setTimeout(function(){
+		//setTimeout(function(){
 			isFinishGoogle = true;
 			ShowDialogFinish();	
-		},delayInMilliseconds);	
+		//},delayInMilliseconds);	
 	};
 	
 	function ShowDialogFinish(){
-		console.log("ccc");
 		if(isFinishFB && isFinishGoogle){
-			alert("Chúc mừng bạn đã nhận được voucher giảm giá 5%");
+			alert("Chúc mừng Bạn đã nhận được voucher giảm giá 5%. Vui lòng liên hệ nhân viên để áp dụng mã giảm giá trực tiếp vào đơn hàng của Bạn");
 		}
 	};
 	
