@@ -141,18 +141,21 @@
 	
 	var funcMethod = {
 		FuncSuccessFB: function() {
+			console.log("aaaa");
 			setTimeout(function() {
 				isFinishFB = true;
 				showDialogFinish();
 			}, delayInMilliseconds);
 		},
 		FuncSuccessGoogle: function() {
+			console.log("bbbbb");
 			setTimeout(function(){
 				isFinishGoogle = true;
 				showDialogFinish();	
 			},delayInMilliseconds);		
 		},
 		showDialogFinish: function(){
+			console.log("ccc");
 			if(isFinishFB && isFinishGoogle){
 				alert("Chúc mừng bạn đã nhận được voucher giảm giá 5%");
 			}
