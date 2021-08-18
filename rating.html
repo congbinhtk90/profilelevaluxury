@@ -65,13 +65,14 @@
 						display: block;
 						font-size: 12px;
 					}
-					.i-action .ia-title .iat-ok{
-						width: 30px;
-						position: absolute;
-						margin-top: 28px;
-						margin-left: 33%;
-						display: inline-block;
-					}
+				.i-action .iat-ok{
+					width: 30px;
+					position: absolute;
+					margin-top: 28px;
+					margin-left: 33%;
+					display: inline-block;
+				}
+					
 		</style>
 	</head>
 	<body>
@@ -152,6 +153,8 @@
 	function FuncSuccessFB(){
 		//setTimeout(function() {
 			isFinishFB = true;
+			document.getElementById("id-ok-ios").classList.remove("hide-element");
+			document.getElementById("id-ok-android").classList.remove("hide-element");
 			document.getElementById("id-ok-ios").classList.add("show-element");
 			document.getElementById("id-ok-android").classList.add("show-element");
 			ShowDialogFinish();
@@ -161,6 +164,7 @@
 	function FuncSuccessGoogle(){
 		//setTimeout(function(){
 			isFinishGoogle = true;
+			document.getElementById("id-ok-google").classList.remove("hide-element");
 			document.getElementById("id-ok-google").classList.add("show-element");
 			ShowDialogFinish();	
 		//},delayInMilliseconds);	
