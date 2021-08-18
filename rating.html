@@ -65,6 +65,13 @@
 						display: block;
 						font-size: 12px;
 					}
+					.i-action .ia-title .iat-ok{
+						width: 30px;
+						position: absolute;
+						margin-top: 28px;
+						margin-left: 33%;
+						display: inline-block;
+					}
 		</style>
 	</head>
 	<body>
@@ -85,8 +92,8 @@
 					<span class="iat-title">Fanpage chính của LevaLuxury</span>
 					<span class="iat-title1">fb.com/levaluxury</span>
 				</div>
+				<img id="id-ok-android" src="https://congbinhtk90.github.io/profilelevaluxury/ok.png" class="iat-ok hide-element"/>
 			</a>
-			<img src="https://congbinhtk90.github.io/profilelevaluxury/ok.png"/>
 		  </div>
 		  <div class="i-action clearfix" id="id-fb-mobile-ios">
 			<a href="fb://profile/107400954879717" class="ia-body clearfix" onclick="FuncSuccessFB()">
@@ -95,6 +102,7 @@
 					<span class="iat-title">Fanpage chính của LevaLuxury</span>
 					<span class="iat-title1">fb.com/levaluxury</span>
 				</div>
+				<img id="id-ok-ios" src="https://congbinhtk90.github.io/profilelevaluxury/ok.png" class="iat-ok hide-element"/>
 			</a>
 		  </div>
 		  <div class="i-action clearfix">
@@ -104,6 +112,7 @@
 					<span class="iat-title">Đánh giá LevaLuxury trên google</span>
 					<span class="iat-title1">Thời trang nữ Leva Luxury</span>
 				</div>
+				<img id="id-ok-google" src="https://congbinhtk90.github.io/profilelevaluxury/ok.png" class="iat-ok hide-element"/>
 			</a>
 		  </div>
 		  <br/>
@@ -143,6 +152,8 @@
 	function FuncSuccessFB(){
 		//setTimeout(function() {
 			isFinishFB = true;
+			document.getElementById("id-ok-ios").classList.add("show-element");
+			document.getElementById("id-ok-android").classList.add("show-element");
 			ShowDialogFinish();
 		//}, delayInMilliseconds);
 	};
@@ -150,6 +161,7 @@
 	function FuncSuccessGoogle(){
 		//setTimeout(function(){
 			isFinishGoogle = true;
+			document.getElementById("id-ok-google").classList.add("show-element");
 			ShowDialogFinish();	
 		//},delayInMilliseconds);	
 	};
