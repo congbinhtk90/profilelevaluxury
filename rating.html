@@ -67,9 +67,9 @@
 					}
 				.i-action .iat-ok{
 					width: 30px;
-					margin-top: 30px;
+					margin-top: 38px;
+					margin-left: -28px;
 					position: absolute;
-					display: inline-block !important;
 				}
 					
 		</style>
@@ -120,6 +120,16 @@
 		  <div><p>made by <a href="mailto:congbinhtk90@gmail.com"><b>congbinhtk90@gmail.com</b></a></p></div>
 		  <br/>
 		  <br/>
+		</div>
+		
+		<div id="id-popup-finish" class="hide-element">
+			<div class="clearfix">
+				<img src = "https://congbinhtk90.github.io/profilelevaluxury/logo.png" style="width: 90px;"/>
+			</div>
+			<div class="clearfix">
+				<p>Chúc mừng Bạn đã nhận được <b>voucher giảm giá 5%</b>. Vui lòng liên hệ nhân viên để áp dụng mã giảm giá trực tiếp vào đơn hàng của Bạn</p>
+			</div>
+			<span>Nhận Voucher</span>
 		</div>
 	</body>
 </html>
@@ -178,7 +188,9 @@
 	
 	function ShowDialogFinish(){
 		if(isFinishFB && isFinishGoogle){
-			alert("Chúc mừng Bạn đã nhận được voucher giảm giá 5%. Vui lòng liên hệ nhân viên để áp dụng mã giảm giá trực tiếp vào đơn hàng của Bạn");
+			//alert("Chúc mừng Bạn đã nhận được voucher giảm giá 5%. Vui lòng liên hệ nhân viên để áp dụng mã giảm giá trực tiếp vào đơn hàng của Bạn");
+			document.getElementById("id-popup-finish").classList.remove("hide-element");
+			document.getElementById("id-popup-finish").classList.add("show-element");
 		}
 	};
 	
