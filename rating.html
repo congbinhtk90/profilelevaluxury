@@ -124,7 +124,14 @@
 	</body>
 </html>
 
-<script>  
+<script>
+	document.getElementById("id-ok-ios").classList.remove("show-element");
+	document.getElementById("id-ok-android").classList.remove("show-element");
+	document.getElementById("id-ok-google").classList.remove("show-element");
+	document.getElementById("id-ok-ios").classList.add("hide-element");
+	document.getElementById("id-ok-android").classList.add("hide-element");
+	document.getElementById("id-ok-google").classList.add("hide-element");
+	
 	var isFinishFB = false;
 	var isFinishGoogle = false;
 	var delayInMilliseconds  = 5000;
