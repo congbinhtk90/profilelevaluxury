@@ -79,7 +79,7 @@
 		  </div>
 		  
 		  <div class="i-action clearfix" id="id-fb-mobile-android">
-			<a href="http://fb.com/levaluxury" class="ia-body clearfix" onclick="funcMethod.funcSuccessFB()">
+			<a href="http://fb.com/levaluxury" class="ia-body clearfix" onclick="funcMethod.FuncSuccessFB">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/facebook-icon.jpg" class="ia-logo"/>
 				<div class="ia-title">
 					<span class="iat-title">Fanpage chính của LevaLuxury</span>
@@ -87,7 +87,7 @@
 				</div>
 			</a>
 		  </div>
-		  <div class="i-action clearfix" id="id-fb-mobile-ios" onclick="funcMethod.funcSuccessFB()">
+		  <div class="i-action clearfix" id="id-fb-mobile-ios" onclick="funcMethod.FuncSuccessFB">
 			<a href="http://fb.com/levaluxury" class="ia-body clearfix">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/facebook-icon.jpg" class="ia-logo"/>
 				<div class="ia-title">
@@ -97,7 +97,7 @@
 			</a>
 		  </div>
 		  <div class="i-action clearfix">
-			<a href="https://g.page/r/CVj3riiaDHpdEAg/review" class="ia-body clearfix" target="blank" onclick="funcMethod.funcSuccessGoogle">
+			<a href="https://g.page/r/CVj3riiaDHpdEAg/review" class="ia-body clearfix" target="blank" onclick="funcMethod.FuncSuccessGoogle">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/google-reviews-logo.jpg" class="ia-logo-google"/>
 				<div class="ia-title">
 					<span class="iat-title">Đánh giá LevaLuxury trên google</span>
@@ -144,17 +144,17 @@
 			console.log("aaaa");
 			//setTimeout(function() {
 				isFinishFB = true;
-				showDialogFinish();
+				ShowDialogFinish();
 			//}, delayInMilliseconds);
 		},
 		FuncSuccessGoogle: function() {
 			console.log("bbbbb");
 			//setTimeout(function(){
 				isFinishGoogle = true;
-				showDialogFinish();	
+				ShowDialogFinish();	
 			//},delayInMilliseconds);		
 		},
-		showDialogFinish: function(){
+		ShowDialogFinish: function(){
 			console.log("ccc");
 			if(isFinishFB && isFinishGoogle){
 				alert("Chúc mừng bạn đã nhận được voucher giảm giá 5%");
