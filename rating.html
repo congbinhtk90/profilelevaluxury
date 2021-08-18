@@ -79,7 +79,7 @@
 		  </div>
 		  
 		  <div class="i-action clearfix" id="id-fb-mobile-android">
-			<a href="http://fb.com/levaluxury" class="ia-body clearfix" onclick="abc">
+			<a href="fb://page/107400954879717" class="ia-body clearfix" onclick="FuncSuccessFB()">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/facebook-icon.jpg" class="ia-logo"/>
 				<div class="ia-title">
 					<span class="iat-title">Fanpage chính của LevaLuxury</span>
@@ -87,8 +87,8 @@
 				</div>
 			</a>
 		  </div>
-		  <div class="i-action clearfix" id="id-fb-mobile-ios" onclick="funcMethod.FuncSuccessFB">
-			<a href="http://fb.com/levaluxury" class="ia-body clearfix">
+		  <div class="i-action clearfix" id="id-fb-mobile-ios" onclick="FuncSuccessFB()">
+			<a href="fb://profile/107400954879717" class="ia-body clearfix">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/facebook-icon.jpg" class="ia-logo"/>
 				<div class="ia-title">
 					<span class="iat-title">Fanpage chính của LevaLuxury</span>
@@ -97,7 +97,7 @@
 			</a>
 		  </div>
 		  <div class="i-action clearfix">
-			<a href="https://g.page/r/CVj3riiaDHpdEAg/review" class="ia-body clearfix" target="blank" onclick="abc()">
+			<a href="https://g.page/r/CVj3riiaDHpdEAg/review" class="ia-body clearfix" target="blank" onclick="FuncSuccessGoogle">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/google-reviews-logo.jpg" class="ia-logo-google"/>
 				<div class="ia-title">
 					<span class="iat-title">Đánh giá LevaLuxury trên google</span>
@@ -139,37 +139,28 @@
 		}
 	};
 	
-	var funcMethod = {
-		FuncSuccessFB: function() {
-			console.log("aaaa");
-			//setTimeout(function() {
-				isFinishFB = true;
-				ShowDialogFinish();
-			//}, delayInMilliseconds);
-		},
-		FuncSuccessGoogle: function() {
-			console.log("bbbbb");
-			//setTimeout(function(){
-				isFinishGoogle = true;
-				ShowDialogFinish();	
-			//},delayInMilliseconds);		
-		},
-		ShowDialogFinish: function(){
-			console.log("ccc");
-			if(isFinishFB && isFinishGoogle){
-				alert("Chúc mừng bạn đã nhận được voucher giảm giá 5%");
-			}
-		}
-	}
+	function FuncSuccessFB(){
+		console.log("aaaa");
+		setTimeout(function() {
+			isFinishFB = true;
+			ShowDialogFinish();
+		}, delayInMilliseconds);
+	};
 	
-	function abc(){
-	debugger;
+	function FuncSuccessGoogle(){
+		console.log("bbbbb");
 		setTimeout(function(){
-				isFinishGoogle = true;
-				//ShowDialogFinish();	
-				alert('aaaa');
-			},delayInMilliseconds);	
-	}
+			isFinishGoogle = true;
+			ShowDialogFinish();	
+		},delayInMilliseconds);	
+	};
+	
+	function ShowDialogFinish(){
+		console.log("ccc");
+		if(isFinishFB && isFinishGoogle){
+			alert("Chúc mừng bạn đã nhận được voucher giảm giá 5%");
+		}
+	};
 	
 	if(isMobile.iOS()){
 		document.getElementById("id-fb-mobile-android").classList.add("hide-element");
