@@ -81,7 +81,12 @@
 					width: 100%;
 				}
 				.pp-main .ppm-action{
-					
+					position: absolute;
+					top: 50%;
+					width: 100%;
+					height: 50%;
+					left: 0%;
+					border: 1px solid;
 				}
 					
 		</style>
@@ -136,7 +141,7 @@
 		
 		<div id="id-popup-finish" class="pp-main hide-element">
 			<img src="https://congbinhtk90.github.io/profilelevaluxury/img-success.png" class="ppm-bag"/>
-			<span class="ppm-action">NHẬN VOUCHER</span>
+			<span class="ppm-action" onclick="HideDialogFinish()"></span>
 		</div>
 	</body>
 </html>
@@ -200,6 +205,11 @@
 			document.getElementById("id-popup-finish").classList.add("show-element");
 		}
 	};
+	
+	function HideDialogFinish(){
+		document.getElementById("id-popup-finish").classList.remove("show-element");
+		document.getElementById("id-popup-finish").classList.add("hide-element");
+	}
 	
 	if(isMobile.iOS()){
 		document.getElementById("id-fb-mobile-android").classList.add("hide-element");
