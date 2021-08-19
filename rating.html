@@ -142,8 +142,8 @@
 			</a>
 		  </div>
 		  
-		  <div class="clearfix i-get-voucher" onclick="ShowDialogFinish()">
-			<span class="igv-action">NHẬN VOUCHER</span>
+		  <div id="id-get-voucher" class="clearfix i-get-voucher hide-element" onclick="ShowDialogFinish()">
+			<span class="clearfix igv-action">NHẬN VOUCHER</span>
 		  </p>
 		  
 		  <br/>
@@ -164,9 +164,12 @@
 	document.getElementById("id-ok-ios").classList.remove("show-element");
 	document.getElementById("id-ok-android").classList.remove("show-element");
 	document.getElementById("id-ok-google").classList.remove("show-element");
+	document.getElementById("id-get-voucher").classList.remove("show-element");
+	
 	document.getElementById("id-ok-ios").classList.add("hide-element");
 	document.getElementById("id-ok-android").classList.add("hide-element");
 	document.getElementById("id-ok-google").classList.add("hide-element");
+	document.getElementById("id-get-voucher").classList.add("hide-element");
 	
 	var isFinishFB = false;
 	var isFinishGoogle = false;
@@ -199,7 +202,7 @@
 			document.getElementById("id-ok-android").classList.remove("hide-element");
 			document.getElementById("id-ok-ios").classList.add("show-element");
 			document.getElementById("id-ok-android").classList.add("show-element");
-			//ShowDialogFinish();
+			CheckShowButtonFinish();
 		//}, delayInMilliseconds);
 	};
 	
@@ -208,9 +211,15 @@
 			isFinishGoogle = true;
 			document.getElementById("id-ok-google").classList.remove("hide-element");
 			document.getElementById("id-ok-google").classList.add("show-element");
-			//ShowDialogFinish();	
+			CheckShowButtonFinish();	
 		//},delayInMilliseconds);	
 	};
+	
+	function CheckShowButtonFinish(){
+		if(isFinishFB %% isFinishGoogle){
+			document.getElementById("id-get-voucher").classList.add("show-element");
+		}
+	}
 	
 	function ShowDialogFinish(){
 		if(isFinishFB && isFinishGoogle){
