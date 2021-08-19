@@ -87,6 +87,16 @@
 					height: 50%;
 					left: 0%;
 				}
+				
+			.i-get-voucher{
+				margin-top: 40px;
+			}
+				.i-get-voucher .igv-action{
+					padding: 10px 20px;
+					border: 1px solid #ffcc00;
+					background-color: #ffcc00;
+					color: #fff;
+				}
 					
 		</style>
 	</head>
@@ -131,6 +141,11 @@
 				<img id="id-ok-google" src="https://congbinhtk90.github.io/profilelevaluxury/ok.png" class="iat-ok hide-element"/>
 			</a>
 		  </div>
+		  
+		  <div class="clearfix i-get-voucher" onclick="ShowDialogFinish()">
+			<span class="igv-action">NHẬN VOUCHER</span>
+		  </p>
+		  
 		  <br/>
 		  <br/>
 		  <div><p>made by <a href="mailto:congbinhtk90@gmail.com"><b>congbinhtk90@gmail.com</b></a></p></div>
@@ -184,7 +199,7 @@
 			document.getElementById("id-ok-android").classList.remove("hide-element");
 			document.getElementById("id-ok-ios").classList.add("show-element");
 			document.getElementById("id-ok-android").classList.add("show-element");
-			ShowDialogFinish();
+			//ShowDialogFinish();
 		//}, delayInMilliseconds);
 	};
 	
@@ -193,13 +208,12 @@
 			isFinishGoogle = true;
 			document.getElementById("id-ok-google").classList.remove("hide-element");
 			document.getElementById("id-ok-google").classList.add("show-element");
-			ShowDialogFinish();	
+			//ShowDialogFinish();	
 		//},delayInMilliseconds);	
 	};
 	
 	function ShowDialogFinish(){
 		if(isFinishFB && isFinishGoogle){
-			//alert("Chúc mừng Bạn đã nhận được voucher giảm giá 10%. Vui lòng liên hệ nhân viên để áp dụng mã giảm giá trực tiếp vào đơn hàng của Bạn");
 			document.getElementById("id-popup-finish").classList.remove("hide-element");
 			document.getElementById("id-popup-finish").classList.add("show-element");
 		}
