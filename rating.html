@@ -131,8 +131,18 @@
 				<img id="id-ok-ios" src="https://congbinhtk90.github.io/profilelevaluxury/ok.png" class="iat-ok hide-element"/>
 			</a>
 		  </div>
-		  <div class="i-action clearfix">
+		  <div class="i-action clearfix" id="id-goo-mobile-android">
 			<a href="intent://g.page/r/CVj3riiaDHpdEAg/review#Intent;scheme=https;action=android.intent.action.VIEW;end;" class="ia-body clearfix" onclick="FuncSuccessGoogle()">
+				<img src="https://congbinhtk90.github.io/profilelevaluxury/google-reviews-logo.jpg" class="ia-logo-google"/>
+				<div class="ia-title">
+					<span class="iat-title">Đánh giá LevaLuxury trên google</span>
+					<span class="iat-title1">Thời trang nữ Leva Luxury</span>
+				</div>
+				<img id="id-ok-google" src="https://congbinhtk90.github.io/profilelevaluxury/ok.png" class="iat-ok hide-element"/>
+			</a>
+		  </div>
+		  <div class="i-action clearfix" id="id-goo-mobile-ios">
+			<a href="safari-https://g.page/r/CVj3riiaDHpdEAg/review" class="ia-body clearfix" onclick="FuncSuccessGoogle()">
 				<img src="https://congbinhtk90.github.io/profilelevaluxury/google-reviews-logo.jpg" class="ia-logo-google"/>
 				<div class="ia-title">
 					<span class="iat-title">Đánh giá LevaLuxury trên google</span>
@@ -165,6 +175,8 @@
 	document.getElementById("id-ok-android").classList.remove("show-element");
 	document.getElementById("id-ok-google").classList.remove("show-element");
 	document.getElementById("id-get-voucher").classList.remove("show-element");
+	document.getElementById("id-goo-mobile-ios").classList.remove("show-element");
+	document.getElementById("id-goo-mobile-android").classList.remove("show-element");
 	
 	document.getElementById("id-ok-ios").classList.add("hide-element");
 	document.getElementById("id-ok-android").classList.add("hide-element");
@@ -243,8 +255,12 @@
 	if(isMobile.iOS()){
 		document.getElementById("id-fb-mobile-android").classList.add("hide-element");
 		document.getElementById("id-fb-mobile-ios").classList.add("show-element");
+		document.getElementById("id-goo-mobile-ios").classList.add("show-element");
+		document.getElementById("id-goo-mobile-android").classList.add("hide-element");
 	}else{
 		document.getElementById("id-fb-mobile-android").classList.add("show-element");
 		document.getElementById("id-fb-mobile-ios").classList.add("hide-element");
+		document.getElementById("id-goo-mobile-ios").classList.add("hide-element");
+		document.getElementById("id-goo-mobile-android").classList.add("show-element");
 	}
 </script>
