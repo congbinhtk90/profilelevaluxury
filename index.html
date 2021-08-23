@@ -142,8 +142,27 @@
 					</a>
 				</div>
 				<p class="i-line clearfix"/>
-				<div class="i-action clearfix">
+				<!--<div class="i-action clearfix">
 					<a href="https://g.page/r/CVj3riiaDHpdEAg/review" class="ia-body clearfix" target="blank">
+						<img src="https://congbinhtk90.github.io/profilelevaluxury/google-reviews-logo.jpg" class="ia-logo-google"/>
+						<div class="ia-title">
+							<span class="iat-title">Đánh giá LevaLuxury trên google</span>
+							<span class="iat-title1">203 Hùng Vương, Tam Kỳ, Quảng Nam</span>
+						</div>
+					</a>
+				</div>-->
+
+				<div class="i-action clearfix" id="id-goo-mobile-android">
+					<a href="intent://g.page/r/CVj3riiaDHpdEAg/review#Intent;scheme=https;action=android.intent.action.VIEW;end;" class="ia-body clearfix" onclick="FuncSuccessGoogle()">
+						<img src="https://congbinhtk90.github.io/profilelevaluxury/google-reviews-logo.jpg" class="ia-logo-google"/>
+						<div class="ia-title">
+							<span class="iat-title">Đánh giá LevaLuxury trên google</span>
+							<span class="iat-title1">203 Hùng Vương, Tam Kỳ, Quảng Nam</span>
+						</div>
+					</a>
+				</div>
+				<div class="i-action clearfix" id="id-goo-mobile-ios">
+					<a href="https://g.page/r/CVj3riiaDHpdEAg/review" class="ia-body clearfix" onclick="FuncSuccessGoogle()">
 						<img src="https://congbinhtk90.github.io/profilelevaluxury/google-reviews-logo.jpg" class="ia-logo-google"/>
 						<div class="ia-title">
 							<span class="iat-title">Đánh giá LevaLuxury trên google</span>
@@ -167,6 +186,8 @@
 	</html>
 
 	<script>  
+	document.getElementById("id-goo-mobile-ios").classList.remove("show-element");
+	document.getElementById("id-goo-mobile-android").classList.remove("show-element");
 	var isMobile = {
 		Android: function() {
 			return navigator.userAgent.match(/Android/i);
@@ -194,13 +215,19 @@
 		if(isMobile.iOS()){
 			document.getElementById("id-fb-mobile-android").classList.add("hide-element");
 			document.getElementById("id-fb-mobile-ios").classList.add("show-element");
+			document.getElementById("id-goo-mobile-ios").classList.add("show-element");
+			document.getElementById("id-goo-mobile-android").classList.add("hide-element");
 		}else{
 			document.getElementById("id-fb-mobile-android").classList.add("show-element");
 			document.getElementById("id-fb-mobile-ios").classList.add("hide-element");
+			document.getElementById("id-goo-mobile-ios").classList.add("hide-element");
+			document.getElementById("id-goo-mobile-android").classList.add("show-element");
 		}
 	}else{
 		document.getElementById("id-fb-web").classList.add("show-element");
 		document.getElementById("id-fb-mobile-android").classList.add("hide-element");
 		document.getElementById("id-fb-mobile-ios").classList.add("hide-element");
+		document.getElementById("id-goo-mobile-ios").classList.add("show-element");
+		document.getElementById("id-goo-mobile-android").classList.add("hide-element");
 	}
 	</script>
