@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Đánh giá thời trang nữ LEVALUXURY</title>
+		<title>Đánh giá Xịn Store</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 			<style>
 			body, html {
@@ -188,9 +188,9 @@
 
 				<div class="clearfix">
 					<p>
-						<b>THỜI TRANG CỦA PHÁI ĐẸP - LEVA LUXURY</b>
+						<b>XỊN STORE</b>
 					</p>
-					<p class="i-notify">Hoàn tất 2 bước để nhận ngay <b>voucher giảm giá 10%</b>
+					<p class="i-notify">Hoàn tất 1 bước để nhận ngay <b>voucher giảm giá 10%</b>
 					</p>
 					<p id="id-notify" class="i-notify-1 hide-element">
 						<b>CÒN 1 BƯỚC NỮA</b>
@@ -250,7 +250,7 @@
 					</div>
 				</div>
 
-				<div class="i-number-1 clearfix" style="margin-top: 5px;">
+				<!--<div class="i-number-1 clearfix" style="margin-top: 5px;">
 					<div class="clearfix" style="margin: 0 10px;">
 						<img src="https://congbinhtk90.github.io/profilelevaluxury/number2.png" class="in1-img"/>
 						<span class="in1-line"/>
@@ -276,7 +276,7 @@
 							<img id="id-ok-google" src="https://congbinhtk90.github.io/profilelevaluxury/ok.png" class="iat-ok hide-element"/>
 						</a>
 					</div>
-				</div>
+				</div>-->
 
 				<div id="id-get-voucher" class="clearfix i-get-voucher hide-element" onclick="ShowDialogFinish()">
 					<span class="clearfix igv-action">NHẬN VOUCHER</span>
@@ -402,6 +402,8 @@
 	};
 
 	function CheckShowButtonFinish(){
+		// Xịn store mới chạy FB
+		isFinishGoogle = true;
 		if(isFinishFB && isFinishGoogle){
 			document.getElementById("id-get-voucher").classList.add("show-element");
 			document.getElementById("id-notify").classList.add("hide-element");
